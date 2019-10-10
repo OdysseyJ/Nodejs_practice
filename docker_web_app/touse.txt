@@ -1,0 +1,18 @@
+docker 구동
+
+touch Dockerfile
+-> Docker file 만들기
+
+.dockerignore 만들기
+-> node_modules
+-> npm-debug.log 추가
+
+
+docker build -t express_server . 로 이미지 만들기
+docker images
+docker run --name express_server_container -p 8085:8080 -d express_server
+로 컨테이너 만들기
+docker ps 현재 실행중인 컨테이너 목록
+docker ps -a 컨테이너 실행 이력.
+docker start express_server_container
+docer stop express_server_container
